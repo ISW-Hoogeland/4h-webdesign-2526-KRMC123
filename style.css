@@ -35,3 +35,35 @@
 /************************* YOUR SETTINGS *************************/
 
 /* add your css here, feel free to use comments and order them logically for better readability */
+
+:root {
+   --bg: #f9fffb; 
+}
+
+body {
+   background: #f9fffb;
+   min-height: 100svh;
+   display: grid;
+   grid-template-areas: 
+   "header nav"
+   "main main"
+   "footer footer";
+   grid-template-columns: 3fr 1fr;
+   grid-template-rows: 100px 1fr 25px;
+}
+
+header {
+   grid-area: header;
+}
+
+nav {
+   grid-area: nav;
+}
+
+main {
+   grid-area: main;
+}
+
+footer {
+   grid-area: footer;
+}
