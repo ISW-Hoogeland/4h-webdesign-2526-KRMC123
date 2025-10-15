@@ -29,7 +29,7 @@
    important side effect: browser usually doesn't take floats
    into account when determining height of div, leading to 
    div with height zero. With this settings, height of div-boxes
-   willl be large enough to fit floats inside. */
+   will be large enough to fit floats inside. */
 /* div { overflow: hidden; }
 
 /************************* YOUR SETTINGS *************************/
@@ -38,10 +38,14 @@
 
 :root {
    --bg: #f9fffb; 
+
+   --h1: #575A5E;
+
+   --main_font: "Raleway", sans-serif;
 }
 
 body {
-   background: #f9fffb;
+   background: var(--bg);
    min-height: 100svh;
    display: grid;
    grid-template-areas: 
@@ -56,8 +60,39 @@ header {
    grid-area: header;
 }
 
+header h1 {
+   color: var(--h1);
+   font-family: var(--main_font);
+   font-weight: 450;
+}
+
+/* 
+#2E2E2E Zwart
+#F5F5F5 Wit
+#B22222 Roof
+#E57373 Roze/Rood
+#FFFFFF Wit
+*/
+
 nav {
    grid-area: nav;
+}
+
+nav ul {
+   list-style: none;
+   display: flex;
+   gap: 10px;
+}
+
+nav a {
+   text-decoration: none;
+   color: var(--h1);
+   font-family: var(--main_font);
+   transition: color 0.4s ease;
+}
+
+nav a:hover{
+   color: #2E933C;
 }
 
 main {
