@@ -39,7 +39,8 @@
 :root {
    --bg: #f9fffb; 
 
-   --h1: #575A5E;
+   --mGrijs: #575A5E;
+   --mGroen: #2E933C;
 
    --main_font: "Raleway", sans-serif;
 }
@@ -58,12 +59,16 @@ body {
 
 header {
    grid-area: header;
+   border-bottom: solid var(--mGrijs);
+   border-bottom-width: 1px;
 }
 
 header h1 {
-   color: var(--h1);
-   font-family: var(--main_font);
+   color: var(--mGrijs);
    font-weight: 450;
+   padding: 25px;
+   margin: 5px;
+   font-family: var(--main_font);
 }
 
 /* 
@@ -76,23 +81,28 @@ header h1 {
 
 nav {
    grid-area: nav;
+   border-bottom: solid var(--mGrijs);
+   border-bottom-width: 1px;
 }
 
 nav ul {
    list-style: none;
    display: flex;
+   justify-content: flex-end;
    gap: 10px;
+   padding: 20px;
 }
 
 nav a {
    text-decoration: none;
-   color: var(--h1);
+   color: var(--mGrijs);
    font-family: var(--main_font);
-   transition: color 0.4s ease;
+   font-size: 20px;
+   transition: 0.4s ease;
 }
 
 nav a:hover{
-   color: #2E933C;
+   color: var(--mGroen);
 }
 
 main {
@@ -101,4 +111,10 @@ main {
 
 footer {
    grid-area: footer;
+   color: var(--mGrijs);
+   font-family: var(--main_font);
+   font-size: 12px;
+   border-top: solid var(--mGrijs);
+   border-top-width: 1px;
+   padding-top: 3px;
 }
