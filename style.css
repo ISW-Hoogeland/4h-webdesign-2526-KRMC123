@@ -37,24 +37,25 @@
 /* add your css here, feel free to use comments and order them logically for better readability */
 
 :root {
-   --bg: #f9fffb; 
+   --bg: #fffee3; 
+   --bg2: #fefff3;
 
    --mGrijs: #575A5E;
-   --mGroen: #2E933C;
+   --mGroen: #28a739;
 
    --main_font: "Raleway", sans-serif;
 }
 
 body {
-   background: var(--bg);
+   background: linear-gradient(90deg, var(--bg) 0%, var(--bg2) 50%, var(--bg) 100% );
    min-height: 100svh;
    display: grid;
    grid-template-areas: 
    "header nav"
-   "main main"
+   "tekst fotos"
    "footer footer";
    grid-template-columns: 3fr 1fr;
-   grid-template-rows: 100px 1fr 25px;
+   grid-template-rows: 100px 1fr 11px;
 }
 
 header {
@@ -106,7 +107,23 @@ nav a:hover{
 }
 
 main {
-   grid-area: main;
+   grid-area: tekst;
+   font-family: var(--main_font);
+}
+
+main p {
+   font-size: 15px;
+   margin-left: 170px;
+   margin-top: 70px;
+
+   border: solid var(--mGrijs);
+   border-width: 1px;
+   border-radius: 12px;
+   padding: 20px;
+}
+
+.fotos {
+   grid-area: fotos;
 }
 
 footer {
